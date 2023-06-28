@@ -26,12 +26,12 @@ Post a Message
 Only POST requests allowed
 
 #### Headers
-*Key*: `Content-Type`
-*Value*: `application/x-www-form-urlencode`
+- *Key*: `Content-Type`
+- *Value*: `application/x-www-form-urlencode`
 
 #### Request Body
-*Key*: `chat`
-*Value*: `[Your Message]`
+- *Key*: `chat`
+- *Value*: `[Your Message]`
 
 #### Example Request Using wget
 ```
