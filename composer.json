@@ -1,0 +1,14 @@
+{
+  "authors": [{
+    "name": "pixlmint"
+  }],
+  "name": "pixlmint/minimalistic-chat-api",
+  "require": {
+    "pixlmint/nacho": "*"
+  },
+  "autoload": {
+    "psr-4": {
+      "Chat\\": "src/"
+    }
+  }
+}
