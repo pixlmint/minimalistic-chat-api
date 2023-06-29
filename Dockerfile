@@ -11,7 +11,7 @@ RUN composer install
 RUN groupadd -o -g ${GID} journal_group
 RUN useradd -M -N -u ${UID} -g ${GID} journal_user
 
-RUN cp docker/apache2.conf /etc/apache2/apache2.conf
+COPY docker/apache2.conf /etc/apache2/apache2.conf
 
 RUN chown -R journal_user:journal_group .
 
