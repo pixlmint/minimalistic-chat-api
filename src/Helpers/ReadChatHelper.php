@@ -4,8 +4,10 @@ namespace Chat\Helpers;
 
 class ReadChatHelper extends AbstractChatHelper
 {
-    public function readChat():?string
+    public function readChat(): ?string
     {
-        return $this->get()->getMessage();
+        $message = $this->get();
+
+        return $message?->getMessage();
     }
 }
