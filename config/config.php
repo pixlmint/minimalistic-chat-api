@@ -5,12 +5,12 @@ use Chat\Controller\Chat;
 return [
     'routes' => [
         [
-            'route' => '/api/read',
+            'route' => '/read',
             'controller' => Chat::class,
             'function' => 'read',
         ],
         [
-            'route' => '/api/write',
+            'route' => '/write',
             'controller' => Chat::class,
             'function' => 'write',
         ],

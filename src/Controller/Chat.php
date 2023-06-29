@@ -10,9 +10,12 @@ use Nacho\Models\Request;
 
 class Chat extends AbstractController
 {
-    public function read(): string
+    public function read(Request $request): string
     {
         $helper = new ReadChatHelper();
+        if (strtoupper($request->requestMethod) !== HttpMethod::GET) {
+            return $this->json(['error' => 'Only GET requests allowed'], 405);
+        }
 
         return $this->json([$helper->readChat()]);
     }

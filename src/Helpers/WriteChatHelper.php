@@ -14,13 +14,13 @@ class WriteChatHelper extends AbstractChatHelper
             return true;
         }
         $now = new \DateTime();
-        $now->modify('-5 minutes');
+        $now->modify('-30 seconds');
         $diff = $now->diff($lastMessage->getDatePosted());
 
         return $diff->invert === 1;
     }
 
-    public function writeMessage(string $strMessage)
+    public function writeMessage(string $strMessage): void
     {
         $message = new ChatMessage($strMessage, time());
 

@@ -4,7 +4,7 @@ A stupid Chat API that only allows one message to exist at any time. No Frontend
 ## endpoints
 There are 2 API endpoints:
 
-### `/api/read` 
+### `/read` 
 Read the current message
 
 #### Request Method
@@ -16,10 +16,10 @@ wget --no-check-certificate --quiet \
 --method GET \
 --timeout=0 \
 --header '' \
-'[Host]/api/read'
+'[Host]/read'
 ```
 
-### `/api/write` 
+### `/write` 
 Post a Message
 
 #### Request Method
@@ -40,5 +40,5 @@ wget --no-check-certificate --quiet \
   --timeout=0 \
   --header 'Content-Type: application/x-www-form-urlencoded' \
   --body-data 'chat=Hello%20World' \
-   '[Host]/api/write'
+   '[Host]/write'
 ```
