@@ -2,7 +2,6 @@
 
 namespace Chat\Helpers;
 
-use Cassandra\Date;
 use Chat\Models\ChatMessage;
 
 class WriteChatHelper extends AbstractChatHelper
