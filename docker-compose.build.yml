@@ -1,0 +1,19 @@
+version: "3"
+
+services:
+  "chatapi":
+    build:
+      dockerfile: Dockerfile
+      context: .
+      args:
+        UID: 99
+        GID: 100
+    image: christiangroeber/minimalistic-chat-api:latest
+    container_name: chatapi_build
+    volumes:
+      - data:/var/www/html/data
+    ports:
+      - "88:80"
+
+volumes:
+  data:
