@@ -16,7 +16,7 @@ wget --no-check-certificate --quiet \
 --method GET \
 --timeout=0 \
 --header '' \
-'[Host]/read'
+'https://chatapi.pixlmint.ch/read'
 ```
 
 ### `/write` 
@@ -40,5 +40,5 @@ wget --no-check-certificate --quiet \
   --timeout=0 \
   --header 'Content-Type: application/x-www-form-urlencoded' \
   --body-data 'chat=Hello%20World' \
-   '[Host]/write'
+   'https://chatapi.pixlmint.ch/write'
 ```

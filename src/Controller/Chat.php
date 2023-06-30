@@ -23,6 +23,9 @@ class Chat extends AbstractController
     public function write(Request $request): string
     {
         $helper = new WriteChatHelper();
+        if (strtoupper($request->requestMethod) !== HttpMethod::POST) {
+            return $this->json(['error' => 'Only POST requests allowed'], 405);
+        }
         if (!key_exists('chat', $_REQUEST)) {
             return $this->json(['error' => 'Please define a chat body'], 400);
         }
